@@ -9,6 +9,8 @@
     </head>
     <body>
         <div class="container border mt-4 p-0">
+          <form>
+            <!-- Encabezado -->
             <div class="header bg-light border-bottom p-2">
                 <h3>Payment form example</h3>
             </div>
@@ -22,7 +24,7 @@
                     <fieldset>
                      <!-- Numeros de Tarjeta -->
                       <label for="pass" class="p-1">Card#</label><br>
-                      <input class="w-100" type="password" id="pass" placeholder="XXXXXXXXXXXX">
+                      <input class="w-100" type="number" id="pass" placeholder="XXXXXXXXXXXX">
                     </fieldset>
                   </div>
                   <div class="col-3">
@@ -34,12 +36,12 @@
                   </div>
                 
                   <div class="col-4">
-                    <fieldset>
+                    <fieldset class="d-block">
                   <!--    Amount -->
                       <label for="amount" class="p-1">Amount</label><br>
-                      <div class="d-flex">
-                        <label for="$"><strong>$</strong></label>
-                        <input class="w-100" type="number" id="amount" placeholder="Amount">
+                      <div class="d-flex flex-row-reverse">
+                        <input class="w-100 " type="number" id="amount" placeholder="Amount">
+                        <span for="$"><strong>$</strong></span>
                       </div>
                     </fieldset>
                 </div>
@@ -84,15 +86,15 @@
               <div class="col-6 px-2">
                 <!-- Apellido -->
                   <fieldset>
-                    <label for="fname" class="p-1">Last Name</label><br>
-                  <input class="w-100" type="text" id="fname" />
+                    <label for="lname" class="p-1">Last Name</label><br>
+                    <input class="w-100" type="text" id="lname" />
                   </fieldset>
                   <!-- Estado y codigo postal -->
                   <div class="row">
                     <div class="col-6">
                       <fieldset>
-                          <span class="p-1">State</span><br>
-                        <select class="w-100" name="state" id="">
+                          <label for="ustate"class="p-1">State</label><br>
+                        <select class="w-100" name="state" id="ustate">
                           <option value="">Pick a state</option>
                           <option value="arizona">Arizona</option>
                           <option value="california">California</option>
@@ -112,8 +114,8 @@
                   </div>
               <!-- Mensaje de notas -->
               <div>
-                <span class="p-1">Message</span><br>
-                <textarea name="notes" style="min-width: 100%; width: 100%;"></textarea><br>
+                <label for="message" class="p-1">Message</label><br>
+                <textarea name="notes" id="message" style="min-width: 100%; width: 100%;"></textarea><br>
                 <span class="text-secondary p-1">Add any notes here.</span>
               </div>
             </div>          
@@ -129,6 +131,7 @@
                 
               </div>
             </div>
+          </form>  
         </div>    
 <!-- Bootstrap link -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
